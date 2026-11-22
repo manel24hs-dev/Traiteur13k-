@@ -86,10 +86,14 @@ h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0 15px}
 .food-photo.four{background-image:url('IMG_3806.jpeg')}
 .food-photo.five{background-image:url('IMG_3809.jpeg')}
 .food-photo.six{background-image:url('IMG_3810.jpeg')}
+.food-photo.sushi{background-image:url('IMG_3812.jpeg')}
+.food-photo.numbercake{background-image:url('IMG_3813.jpeg')}
+.food-photo.cupcake{background-image:url('IMG_3814.jpeg')}
+
 .card-body{padding:18px}
 .card h3{margin:0 0 7px;color:var(--gold);font-size:1.35rem}
 .card p{margin:0;color:var(--muted);font-size:.93rem}
-.price{color:var(--gold);font-weight:bold;margin-top:10px!important}
+.price{color:var(--gold)!important;font-weight:bold;margin-top:10px!important}
 .band{
   background:linear-gradient(120deg,#211b11,#171512);
   border-top:1px solid #4b3b20;border-bottom:1px solid #4b3b20;
@@ -109,6 +113,14 @@ h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0 15px}
   border-radius:10px;
 }
 .order-intro{text-align:center;margin-bottom:25px}
+.order-category{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:1.5rem;
+  margin:30px 0 8px;
+  padding-bottom:8px;
+  border-bottom:1px solid #51452f;
+}
 .order-item{
   display:flex;justify-content:space-between;align-items:center;
   gap:15px;padding:13px 0;border-bottom:1px solid #393126;
@@ -127,11 +139,13 @@ h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0 15px}
 .quantity span{min-width:22px;text-align:center;font-weight:bold}
 .field{margin:16px 0}
 .field label{display:block;margin-bottom:6px;color:var(--muted)}
-.field input,.field textarea{
+.field input,.field textarea,.field select,
+.number-choice{
   width:100%;padding:12px;border-radius:5px;
   border:1px solid #51452f;background:#11100f;color:white;
   font:inherit;
 }
+.number-choice{max-width:110px;margin-top:8px}
 .total-box{
   margin-top:24px;padding:20px;text-align:center;
   background:#11100f;border:1px solid #4b3b20;border-radius:8px;
@@ -142,6 +156,7 @@ h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0 15px}
   font-size:1rem;
 }
 .note{font-size:.8rem;color:#a99f90;margin-top:15px}
+.promo-note{color:var(--gold);font-size:.9rem;margin-top:8px}
 .contact-box{
   max-width:760px;margin:auto;text-align:center;
   background:var(--panel);border:1px solid #4b3b20;
@@ -190,8 +205,8 @@ footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
     <div class="eyebrow">Traiteur événementiel · Marseille & alentours</div>
     <h1>Vos événements<br><span>méritent un buffet</span><br>gourmand.</h1>
     <p class="lead">
-      Mini-burgers, wraps, pizzas, hot-dogs, verrines et bien d'autres
-      gourmandises pour faire de vos événements des moments inoubliables.
+      Mini-burgers, wraps, pizzas, hot-dogs, sushis, verrines,
+      cupcakes et bien d'autres gourmandises pour vos événements.
     </p>
     <div class="hero-actions">
       <a class="btn" href="#commande">Passer commande</a>
@@ -201,167 +216,325 @@ footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 </section>
 
 <section id="carte">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Nos spécialités</div>
-      <h2>Notre carte gourmande</h2>
-      <p>Des petites pièces gourmandes, préparées pour vos buffets et réceptions.</p>
-    </div>
-
-    <div class="grid">
-      <article class="card">
-        <div class="food-photo one"></div>
-        <div class="card-body">
-          <h3>Mini-burgers</h3>
-          <p>De délicieux mini-burgers à partager.</p>
-          <p class="price">0,98 € / pièce</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="food-photo two"></div>
-        <div class="card-body">
-          <h3>Mini-wraps</h3>
-          <p>Des wraps garnis de tenders, joliment présentés.</p>
-          <p class="price">0,98 € / pièce</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="food-photo three"></div>
-        <div class="card-body">
-          <h3>Mini-pizzas</h3>
-          <p>De petites parts de pizza carrées et gourmandes.</p>
-          <p class="price">0,98 € / pièce</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="food-photo four"></div>
-        <div class="card-body">
-          <h3>Mini-hot-dogs</h3>
-          <p>Une bouchée conviviale pour tous vos événements.</p>
-          <p class="price">0,98 € / pièce</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="food-photo five"></div>
-        <div class="card-body">
-          <h3>Verrines sucrées</h3>
-          <p>Tiramisu ou fruits, pour une touche sucrée et gourmande.</p>
-          <p class="price">1,50 € / pièce</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="food-photo six"></div>
-        <div class="card-body">
-          <h3>Verrines salées</h3>
-          <p>Tomate mozzarella, thon concombre fromage ou surimi fromage.</p>
-          <p class="price">1,50 € / pièce</p>
-        </div>
-      </article>
-    </div>
+<div class="wrap">
+  <div class="section-head">
+    <div class="eyebrow">Nos spécialités</div>
+    <h2>Notre carte gourmande</h2>
+    <p>Des petites pièces gourmandes, préparées pour vos buffets et réceptions.</p>
   </div>
+
+  <h3 class="category-title">🥪 Nos spécialités salées</h3>
+  <div class="grid">
+
+    <article class="card">
+      <div class="food-photo one"></div>
+      <div class="card-body">
+        <h3>Mini-burgers</h3>
+        <p>De délicieux mini-burgers à partager.</p>
+        <p class="price">0,98 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="food-photo two"></div>
+      <div class="card-body">
+        <h3>Mini-wraps</h3>
+        <p>Des wraps garnis de tenders, joliment présentés.</p>
+        <p class="price">0,98 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="food-photo three"></div>
+      <div class="card-body">
+        <h3>Mini-pizzas</h3>
+        <p>De petites parts de pizza carrées et gourmandes.</p>
+        <p class="price">0,98 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="food-photo four"></div>
+      <div class="card-body">
+        <h3>Mini-hot-dogs</h3>
+        <p>Une bouchée conviviale pour vos événements.</p>
+        <p class="price">0,98 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Tots</h3>
+        <p>Petites bouchées gourmandes.</p>
+        <p class="price">1,50 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Mini-blinis</h3>
+        <p>Des petites bouchées pour vos buffets.</p>
+        <p class="price">1,20 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Mini-quiches</h3>
+        <p>Des mini-quiches salées.</p>
+        <p class="price">1,00 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Mini-croissants</h3>
+        <p>De délicieux mini-croissants salés.</p>
+        <p class="price">1,50 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Mini-clubs</h3>
+        <p>Petits sandwichs clubs à partager.</p>
+        <p class="price">1,20 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Sandwichs</h3>
+        <p>Petits sandwichs pour vos réceptions.</p>
+        <p class="price">1,20 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Mini-brochettes</h3>
+        <p>Des bouchées à déguster.</p>
+        <p class="price">1,00 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="food-photo six"></div>
+      <div class="card-body">
+        <h3>Verrines salées</h3>
+        <p>Tomate mozzarella, thon concombre fromage ou surimi fromage.</p>
+        <p class="price">1,50 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Tempura de crevettes</h3>
+        <p>Des crevettes croustillantes.</p>
+        <p class="price">1,50 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="food-photo sushi"></div>
+      <div class="card-body">
+        <h3>Sushis</h3>
+        <p>Plusieurs variétés au choix.</p>
+        <p class="price">1,20 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Mini-bûches salées</h3>
+        <p>Des mini-bûches salées pour vos buffets.</p>
+        <p class="price">1,50 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Mini-vol-au-vent</h3>
+        <p>Au saumon ou au poulet.</p>
+        <p class="price">1,50 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Wraps au saumon</h3>
+        <p>Des wraps garnis au saumon.</p>
+        <p class="price">0,99 € / pièce</p>
+      </div>
+    </article>
+  </div>
+
+  <h3 class="category-title">🍰 Nos douceurs sucrées</h3>
+  <div class="grid">
+
+    <article class="card">
+      <div class="food-photo five"></div>
+      <div class="card-body">
+        <h3>Verrines sucrées</h3>
+        <p>Tiramisu ou fruits.</p>
+        <p class="price">1,50 € / pièce</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="food-photo cupcake"></div>
+      <div class="card-body">
+        <h3>Cupcakes</h3>
+        <p>De jolis cupcakes décorés.</p>
+        <p class="price">1 : 2,50 € · 6 : 12 € · 12 : 22 €</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="food-photo numbercake"></div>
+      <div class="card-body">
+        <h3>Number cakes</h3>
+        <p>Choisissez les chiffres de votre gâteau.</p>
+        <p class="price">1 chiffre : 35 € · 2 chiffres : 70 €</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <h3>Tartelettes</h3>
+        <p>Au choix : fruits ou citron.</p>
+        <p class="price">2,00 € / pièce</p>
+      </div>
+    </article>
+
+  </div>
+
+  <h3 class="category-title">🍹 Nos cocktails</h3>
+  <div class="grid">
+    <article class="card">
+      <div class="card-body">
+        <h3>Cocktails sans alcool</h3>
+        <p>Citron, menthe, banane-kiwi, passion-mangue, myrtille, fraise, pina colada et mojito.</p>
+        <p class="price">2,50 € / verre</p>
+        <p class="promo-note">Minimum 10 verres par parfum.</p>
+      </div>
+    </article>
+  </div>
+</div>
 </section>
 
 <section class="band" id="offres">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Nos offres</div>
-      <h2>Des formules pour vos événements</h2>
-    </div>
-
-    <div class="offer-grid">
-      <div class="offer">
-        <h3>Verrines sucrées</h3>
-        <p>Au choix : tiramisu ou fruits.</p>
-        <p><strong>20 verrines : 30 €</strong></p>
-        <p><strong>40 verrines : 50 €</strong></p>
-      </div>
-
-      <div class="offer">
-        <h3>Verrines salées</h3>
-        <p>Tomate mozzarella, thon concombre fromage ou surimi fromage.</p>
-        <p><strong>20 verrines : 30 €</strong></p>
-        <p><strong>40 verrines : 50 €</strong></p>
-      </div>
-
-      <div class="offer">
-        <h3>Pack réception · 30 personnes</h3>
-        <p>30 cocktails, 240 miniardises, décoration du buffet et frais de déplacement.</p>
-        <p><strong>550 €</strong></p>
-      </div>
-
-      <div class="offer">
-        <h3>Offre spéciale · 500 pièces</h3>
-        <p>Une grande commande pour vos réceptions.</p>
-        <p><strong>470 €</strong></p>
-        <p>Économisez 40 € sur cette offre.</p>
-      </div>
-    </div>
+<div class="wrap">
+  <div class="section-head">
+    <div class="eyebrow">Nos offres</div>
+    <h2>Des formules pour vos événements</h2>
   </div>
+
+  <div class="offer-grid">
+
+    <div class="offer">
+      <h3>Verrines sucrées</h3>
+      <p>Au choix : tiramisu ou fruits.</p>
+      <p><strong>20 verrines : 30 €</strong></p>
+      <p><strong>40 verrines : 50 €</strong></p>
+    </div>
+
+    <div class="offer">
+      <h3>Verrines salées</h3>
+      <p>Tomate mozzarella, thon concombre fromage ou surimi fromage.</p>
+      <p><strong>20 verrines : 30 €</strong></p>
+      <p><strong>40 verrines : 50 €</strong></p>
+    </div>
+
+    <div class="offer">
+      <h3>Pack réception · 30 personnes</h3>
+      <p>30 cocktails, 240 mignardises, décoration du buffet et frais de déplacement.</p>
+      <p><strong>550 €</strong></p>
+    </div>
+
+    <div class="offer">
+      <h3>Offre spéciale · 500 pièces</h3>
+      <p>Une grande commande pour vos réceptions.</p>
+      <p><strong>470 €</strong></p>
+      <p>Économisez 40 € sur cette offre.</p>
+    </div>
+
+    <div class="offer">
+      <h3>🍣 Promo spéciale sushis</h3>
+      <p>Un assortiment de 100 sushis.</p>
+      <p><strong>100 sushis : 115 €</strong></p>
+    </div>
+
+    <div class="offer">
+      <h3>🍹 Cocktails</h3>
+      <p>Plusieurs parfums disponibles.</p>
+      <p><strong>2,50 € par verre</strong></p>
+      <p>Minimum 10 verres par parfum.</p>
+    </div>
+
+  </div>
+</div>
 </section>
 
 <section id="commande">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Votre commande</div>
-      <h2>Composez votre buffet</h2>
-      <p>Choisissez les produits et les quantités souhaitées. Le montant se calcule automatiquement.</p>
-    </div>
-
-    <div class="order-box">
-      <div class="order-intro">
-        <h3>Votre sélection</h3>
-        <p class="muted">Utilisez les boutons + et − pour choisir vos quantités.</p>
-      </div>
-
-      <div id="products"></div>
-
-      <div class="field">
-        <label for="customer">Votre nom</label>
-        <input id="customer" type="text" placeholder="Votre nom">
-      </div>
-
-      <div class="field">
-        <label for="eventDate">Date de votre événement</label>
-        <input id="eventDate" type="date">
-      </div>
-
-      <div class="field">
-        <label for="details">Informations complémentaires</label>
-        <textarea id="details" rows="3" placeholder="Adresse, événement, demandes particulières..."></textarea>
-      </div>
-
-      <div class="total-box">
-        <p>Total estimé de votre commande</p>
-        <strong id="total">0,00 €</strong>
-        <p class="muted">Le devis final sera confirmé avec Traiteur13K.</p>
-      </div>
-
-      <button class="btn order-button" onclick="sendOrder()">
-        Envoyer ma commande par SMS
-      </button>
-      <p class="note">
-        Votre sélection sera préparée dans un message SMS à envoyer.
-        Vérifiez les informations avant de l'envoyer.
-      </p>
-    </div>
+<div class="wrap">
+  <div class="section-head">
+    <div class="eyebrow">Votre commande</div>
+    <h2>Composez votre buffet</h2>
+    <p>Choisissez vos produits et les quantités souhaitées. Le montant se calcule automatiquement.</p>
   </div>
+
+  <div class="order-box">
+    <div class="order-intro">
+      <h3>Votre sélection</h3>
+      <p class="muted">Utilisez les boutons + et − pour choisir vos quantités.</p>
+    </div>
+
+    <div id="products"></div>
+
+    <div class="field">
+      <label for="customer">Votre nom</label>
+      <input id="customer" type="text" placeholder="Votre nom">
+    </div>
+
+    <div class="field">
+      <label for="eventDate">Date de votre événement</label>
+      <input id="eventDate" type="date">
+    </div>
+
+    <div class="field">
+      <label for="details">Informations complémentaires</label>
+      <textarea id="details" rows="3" placeholder="Adresse, événement, demandes particulières..."></textarea>
+    </div>
+
+    <div class="total-box">
+      <p>Total estimé de votre commande</p>
+      <strong id="total">0,00 €</strong>
+      <p class="muted">Le devis final sera confirmé avec Traiteur13K.</p>
+    </div>
+
+    <button class="btn order-button" onclick="sendOrder()">
+      Envoyer ma commande par SMS
+    </button>
+
+    <p class="note">
+      Votre sélection sera préparée dans un message SMS à envoyer.
+      Vérifiez les informations avant de l'envoyer.
+    </p>
+  </div>
+</div>
 </section>
 
 <section id="contact">
-  <div class="wrap">
-    <div class="contact-box">
-      <div class="eyebrow">Contact & réservations</div>
-      <h2>Préparons votre prochain événement</h2>
-      <p class="muted">Pour vos commandes et demandes de devis à Marseille et alentours.</p>
-      <a class="phone" href="tel:0775717095">07 75 71 70 95</a>
-      <a class="btn" href="sms:0775717095">Nous contacter par SMS</a>
-    </div>
+<div class="wrap">
+  <div class="contact-box">
+    <div class="eyebrow">Contact & réservations</div>
+    <h2>Préparons votre prochain événement</h2>
+    <p class="muted">Pour vos commandes et demandes de devis à Marseille et alentours.</p>
+    <a class="phone" href="tel:0775717095">07 75 71 70 95</a>
+    <a class="btn" href="sms:0775717095">Nous contacter par SMS</a>
   </div>
+</div>
 </section>
 </main>
 
@@ -373,79 +546,240 @@ footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 </footer>
 
 <script>
-const products = [
-  {name:"Mini-burgers",price:0.98},
-  {name:"Mini-wraps",price:0.98},
-  {name:"Mini-pizzas",price:0.98},
-  {name:"Mini-hot-dogs",price:0.98},
-  {name:"Tots",price:1.50},
-  {name:"Mini-blinis",price:1.20},
-  {name:"Mini-quiches",price:1.00},
-  {name:"Mini-croissants",price:1.50},
-  {name:"Mini-clubs",price:1.20},
-  {name:"Sandwichs",price:1.20},
-  {name:"Mini-brochettes",price:1.00},
-  {name:"Verrines salées",price:1.50},
-  {name:"Verrines sucrées",price:1.50},
-  {name:"Tempura de crevettes",price:1.50}
+const categories = [
+  {
+    title:"🥪 Produits salés",
+    items:[
+      {name:"Mini-burgers",price:0.98},
+      {name:"Mini-wraps aux tenders",price:0.98},
+      {name:"Mini-pizzas",price:0.98},
+      {name:"Mini-hot-dogs",price:0.98},
+      {name:"Tots",price:1.50},
+      {name:"Mini-blinis",price:1.20},
+      {name:"Mini-quiches",price:1.00},
+      {name:"Mini-croissants",price:1.50},
+      {name:"Mini-clubs",price:1.20},
+      {name:"Sandwichs",price:1.20},
+      {name:"Mini-brochettes",price:1.00},
+      {name:"Verrines salées",price:1.50},
+      {name:"Tempura de crevettes",price:1.50},
+      {name:"Mini-bûches salées",price:1.50},
+      {name:"Mini-vol-au-vent saumon",price:1.50},
+      {name:"Mini-vol-au-vent poulet",price:1.50},
+      {name:"Wraps au saumon",price:0.99}
+    ]
+  },
+  {
+    title:"🍣 Sushis",
+    items:[
+      {name:"Sushi saumon",price:1.20},
+      {name:"Maki saumon",price:1.20},
+      {name:"California saumon avocat",price:1.20},
+      {name:"Maki avocat",price:1.20},
+      {name:"Sushi crevette",price:1.20},
+      {name:"Promo : assortiment de 100 sushis",price:115,unit:"le lot de 100"}
+    ]
+  },
+  {
+    title:"🍰 Produits sucrés",
+    items:[
+      {name:"Verrines sucrées",price:1.50},
+      {name:"Cupcake à l'unité",price:2.50},
+      {name:"Boîte de 6 cupcakes",price:12,unit:"la boîte"},
+      {name:"Boîte de 12 cupcakes",price:22,unit:"la boîte"},
+      {name:"Tartelettes aux fruits",price:2.00},
+      {name:"Tartelettes au citron",price:2.00}
+    ]
+  },
+  {
+    title:"🎂 Number cake",
+    items:[
+      {name:"Number cake",type:"numbercake",price:35}
+    ]
+  },
+  {
+    title:"🍹 Cocktails",
+    items:[
+      {name:"Cocktail citron",price:2.50,step:10},
+      {name:"Cocktail menthe",price:2.50,step:10},
+      {name:"Cocktail banane-kiwi",price:2.50,step:10},
+      {name:"Cocktail passion-mangue",price:2.50,step:10},
+      {name:"Cocktail myrtille",price:2.50,step:10},
+      {name:"Cocktail fraise",price:2.50,step:10},
+      {name:"Cocktail pina colada",price:2.50,step:10},
+      {name:"Cocktail mojito",price:2.50,step:10}
+    ]
+  }
 ];
 
 const quantities = {};
-products.forEach((p,i)=>quantities[i]=0);
+const cakeDigits = {};
+let nextIndex = 0;
+
+categories.forEach(category=>{
+  category.items.forEach(product=>{
+    product.id=nextIndex;
+    quantities[nextIndex]=0;
+    if(product.type==="numbercake"){
+      cakeDigits[nextIndex]="1";
+    }
+    nextIndex++;
+  });
+});
 
 function euro(value){
   return value.toLocaleString("fr-FR",{
-    style:"currency",currency:"EUR"
+    style:"currency",
+    currency:"EUR"
   });
+}
+
+function getProductPrice(product){
+  if(product.type==="numbercake"){
+    return cakeDigits[product.id]==="2" ? 70 : 35;
+  }
+  return product.price;
 }
 
 function renderProducts(){
   const container=document.getElementById("products");
   container.innerHTML="";
 
-  products.forEach((product,index)=>{
-    const item=document.createElement("div");
-    item.className="order-item";
-    item.innerHTML=`
-      <div>
-        <div class="order-name">${product.name}</div>
-        <div class="order-price">${euro(product.price)} / pièce</div>
-      </div>
-      <div class="quantity">
-        <button type="button" aria-label="Retirer ${product.name}"
-          onclick="changeQuantity(${index},-1)">−</button>
-        <span id="qty-${index}">${quantities[index]}</span>
-        <button type="button" aria-label="Ajouter ${product.name}"
-          onclick="changeQuantity(${index},1)">+</button>
-      </div>
-    `;
-    container.appendChild(item);
+  categories.forEach(category=>{
+    const heading=document.createElement("h3");
+    heading.className="order-category";
+    heading.textContent=category.title;
+    container.appendChild(heading);
+
+    category.items.forEach(product=>{
+      const item=document.createElement("div");
+      item.className="order-item";
+
+      const left=document.createElement("div");
+      const name=document.createElement("div");
+      name.className="order-name";
+      name.textContent=product.name;
+
+      const price=document.createElement("div");
+      price.className="order-price";
+
+      if(product.type==="numbercake"){
+        price.textContent="35 € (1 chiffre) ou 70 € (2 chiffres)";
+      }else{
+        price.textContent=euro(product.price)+" / "+(product.unit || "pièce");
+      }
+
+      left.appendChild(name);
+      left.appendChild(price);
+
+      if(product.type==="numbercake"){
+        const select=document.createElement("select");
+        select.className="number-choice";
+        select.setAttribute("aria-label","Nombre de chiffres");
+        select.innerHTML=`
+          <option value="1">1 chiffre</option>
+          <option value="2">2 chiffres</option>
+        `;
+        select.value=cakeDigits[product.id];
+
+        select.onchange=()=>{
+          cakeDigits[product.id]=select.value;
+          updateTotal();
+        };
+
+        const digitInput=document.createElement("input");
+        digitInput.type="text";
+        digitInput.placeholder="Exemple : 18";
+        digitInput.maxLength=2;
+        digitInput.className="number-choice";
+        digitInput.style.marginLeft="5px";
+        digitInput.setAttribute("aria-label","Chiffres souhaités");
+        digitInput.id="cake-numbers";
+
+        left.appendChild(document.createElement("br"));
+        left.appendChild(select);
+        left.appendChild(digitInput);
+      }
+
+      const quantity=document.createElement("div");
+      quantity.className="quantity";
+
+      const minus=document.createElement("button");
+      minus.type="button";
+      minus.textContent="−";
+      minus.setAttribute("aria-label","Retirer "+product.name);
+      minus.onclick=()=>changeQuantity(product.id,-(product.step || 1));
+
+      const count=document.createElement("span");
+      count.id="qty-"+product.id;
+      count.textContent=quantities[product.id];
+
+      const plus=document.createElement("button");
+      plus.type="button";
+      plus.textContent="+";
+      plus.setAttribute("aria-label","Ajouter "+product.name);
+      plus.onclick=()=>changeQuantity(product.id,product.step || 1);
+
+      quantity.appendChild(minus);
+      quantity.appendChild(count);
+      quantity.appendChild(plus);
+
+      item.appendChild(left);
+      item.appendChild(quantity);
+      container.appendChild(item);
+
+      if(product.step===10){
+        const note=document.createElement("p");
+        note.className="promo-note";
+        note.textContent="Minimum 10 verres pour ce parfum. Les quantités augmentent par 10.";
+        container.appendChild(note);
+      }
+    });
   });
 }
 
 function changeQuantity(index,change){
+  const product=categories.flatMap(c=>c.items).find(p=>p.id===index);
+
   quantities[index]=Math.max(0,quantities[index]+change);
+
+  if(product && product.step===10 && quantities[index]>0){
+    quantities[index]=Math.max(10,quantities[index]);
+  }
+
   document.getElementById("qty-"+index).textContent=quantities[index];
   updateTotal();
 }
 
 function updateTotal(){
   let total=0;
-  products.forEach((product,index)=>{
-    total+=product.price*quantities[index];
+
+  categories.forEach(category=>{
+    category.items.forEach(product=>{
+      total+=getProductPrice(product)*quantities[product.id];
+    });
   });
+
   document.getElementById("total").textContent=euro(total);
   return total;
 }
 
 function sendOrder(){
-  const selected=products
-    .map((product,index)=>({
-      name:product.name,
-      quantity:quantities[index],
-      price:product.price
-    }))
-    .filter(item=>item.quantity>0);
+  const selected=[];
+
+  categories.forEach(category=>{
+    category.items.forEach(product=>{
+      const quantity=quantities[product.id];
+
+      if(quantity>0){
+        selected.push({
+          name:product.name,
+          quantity,
+          price:getProductPrice(product)
+        });
+      }
+    });
+  });
 
   if(selected.length===0){
     alert("Choisissez au moins un produit avant d'envoyer votre commande.");
@@ -455,23 +789,45 @@ function sendOrder(){
   const customer=document.getElementById("customer").value.trim();
   const date=document.getElementById("eventDate").value;
   const details=document.getElementById("details").value.trim();
+
+  const cakeProduct=categories.flatMap(c=>c.items).find(p=>p.type==="numbercake");
+  const cakeNumbers=document.getElementById("cake-numbers");
+
+  if(cakeProduct && quantities[cakeProduct.id]>0){
+    const digits=cakeDigits[cakeProduct.id];
+    const numbers=cakeNumbers ? cakeNumbers.value.trim() : "";
+
+    if(!numbers || numbers.length!==Number(digits) || !/^\d+$/.test(numbers)){
+      alert("Merci d'indiquer correctement les chiffres souhaités pour votre number cake.");
+      return;
+    }
+  }
+
   const total=updateTotal();
 
-  let message="Bonjour Traiteur13K ! Je souhaite passer une commande :%0A";
   let lines="Bonjour Traiteur13K ! Je souhaite passer une commande :\n";
 
   if(customer) lines+="Nom : "+customer+"\n";
   if(date) lines+="Date de l'événement : "+date+"\n";
 
   lines+="\nMa sélection :\n";
+
   selected.forEach(item=>{
-    lines+=item.name+" : "+item.quantity+" pièce(s) - "+
+    lines+=item.name+" : "+item.quantity+" - "+
       euro(item.price*item.quantity)+"\n";
   });
 
-  lines+="\nTotal estimé : "+euro(total)+"\n";
-  if(details) lines+="\nInformations complémentaires : "+details+"\n";
-  lines+="\nMerci de me confirmer la disponibilité et le devis.";
+  if(cakeProduct && quantities[cakeProduct.id]>0){
+    lines+="Chiffres du number cake : "+cakeNumbers.value.trim()+"\n";
+  }
+
+  lines+="\nTotal estimé : "+euro(total);
+
+  if(details){
+    lines+="\n\nInformations complémentaires : "+details;
+  }
+
+  lines+="\n\nMerci de me confirmer la disponibilité et le devis.";
 
   const smsUrl="sms:0775717095?body="+encodeURIComponent(lines);
   window.location.href=smsUrl;
