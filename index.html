@@ -2,490 +2,594 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Traiteur13K | Marseille</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#11100f">
+<meta name="description" content="Traiteur13K - Buffets, mini-fours et verrines pour vos événements à Marseille et alentours.">
+<title>Traiteur13K | Traiteur événementiel</title>
 
 <style>
 :root{
---bg:#11100f;
---panel:#1c1a17;
---gold:#d8b56b;
---cream:#f7f1e5;
---muted:#c8c0b2
+  --bg:#11100f;
+  --panel:#1c1a17;
+  --gold:#d8b56b;
+  --cream:#f7f1e5;
+  --muted:#c8c0b2;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-margin:0;background:var(--bg);color:var(--cream);
-font-family:Arial,sans-serif;line-height:1.6
+  margin:0;
+  background:var(--bg);
+  color:var(--cream);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
 }
 a{color:inherit;text-decoration:none}
 .wrap{width:min(1120px,92%);margin:auto}
 
 header{
-position:sticky;top:0;z-index:5;
-background:#11100fee;border-bottom:1px solid #393126
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(17,16,15,.96);
+  border-bottom:1px solid #393126;
 }
 .nav{
-display:flex;align-items:center;justify-content:space-between;
-padding:16px 0;gap:15px
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 0;
+  gap:15px;
 }
 .logo{
-font-family:Georgia,serif;font-size:1.5rem;
-letter-spacing:2px;color:var(--gold);font-weight:bold
+  font-family:Georgia,serif;
+  font-size:1.5rem;
+  letter-spacing:2px;
+  color:var(--gold);
+  font-weight:bold;
 }
 .navlinks{display:flex;gap:20px;color:var(--muted);font-size:.9rem}
+.navlinks a:hover{color:var(--gold)}
+
 .btn{
-display:inline-block;background:var(--gold);color:#17130d;
-padding:13px 20px;border-radius:4px;font-weight:bold;
-border:0;cursor:pointer
+  display:inline-block;
+  background:var(--gold);
+  color:#17130d;
+  padding:13px 20px;
+  border-radius:5px;
+  font-weight:bold;
+  border:0;
+  cursor:pointer;
 }
-.btn-outline{border:1px solid var(--gold);color:var(--gold);background:transparent}
+.btn:hover{background:#edcf8c}
+.btn-outline{
+  border:1px solid var(--gold);
+  color:var(--gold);
+  background:transparent;
+}
 
 .hero{
-min-height:570px;display:flex;align-items:center;
-background:linear-gradient(90deg,#0c0b0af5,#0c0b0a80),
-url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1800&q=85') center/cover
+  min-height:580px;
+  display:flex;
+  align-items:center;
+  background:
+  linear-gradient(90deg,rgba(12,11,10,.93),rgba(12,11,10,.35)),
+  url('https://static.tildacdn.com/tild6234-6333-4435-a133-643366663064/3242342.png')
+  center/cover;
 }
-.hero-content{padding:80px 0;max-width:700px}
+.hero-content{max-width:700px;padding:80px 0}
 .eyebrow{
-color:var(--gold);text-transform:uppercase;
-letter-spacing:3px;font-size:.78rem;font-weight:bold
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:.78rem;
+  font-weight:bold;
 }
-h1,h2,h3{font-family:Georgia,serif;line-height:1.2}
-h1{font-size:clamp(2.7rem,6vw,5rem)}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.2}
+h1{font-size:clamp(2.7rem,6vw,5rem);margin:18px 0}
 h1 span{color:var(--gold)}
-.lead{font-size:1.1rem;color:#e0d8ca}
+.lead{font-size:1.12rem;color:#e0d8ca;max-width:580px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 
-section{padding:75px 0}
+section{padding:70px 0}
 .section-head{text-align:center;max-width:720px;margin:0 auto 38px}
-h2{font-size:clamp(2rem,4vw,3rem)}
-.muted,.section-head p{color:var(--muted)}
+h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0}
+.section-head p,.muted{color:var(--muted)}
 
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
 .card{
-background:var(--panel);border:1px solid #393126;
-border-radius:8px;overflow:hidden
+  background:var(--panel);
+  border:1px solid #393126;
+  border-radius:8px;
+  overflow:hidden;
 }
-.food-photo{height:190px;background-size:cover;background-position:center}
-.one{background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80')}
-.two{background-image:url('https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80')}
-.three{background-image:url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80')}
-
-/* Nouvelle photo des hot-dogs */
-.four{
-background-image:url('https://static.wixstatic.com/media/772656_1c45e1dc3ee9449eb3a3de1b2b673c8f~mv2.jpg/v1/fill/w_640%2Ch_594%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/772656_1c45e1dc3ee9449eb3a3de1b2b673c8f~mv2.jpg')
+.food-photo{
+  height:190px;
+  background-size:cover;
+  background-position:center;
 }
-.five{background-image:url('https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80')}
-
-/* Nouvelle vraie photo de verrines salées */
-.six{
-background-image:url('https://static.750g.com/images/1200-675/2f6a6a37f93bdce8491b09171d9a1330/verrines-de-thon-tomates-surimi-r58499.png')
+.food-photo.one{
+  background-image:url('IMG_1886.jpeg');
 }
-
-.card-body{padding:20px}
-.card h3{color:var(--gold);margin:0 0 8px}
-.card p{color:var(--muted);margin:0}
-
-.price-menu{
-margin-top:55px;padding:35px;background:#211d17;
-border:1px solid #594626;border-radius:10px
+.food-photo.two{
+  background-image:url('https://royalplatter.com.au/cdn/shop/products/Mini-Wrap-For-Lunch.jpg?v=1658293441');
 }
-.price-heading{text-align:center;margin-bottom:25px}
-.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 30px}
-.price-item{
-display:flex;justify-content:space-between;gap:12px;
-padding:12px 2px;border-bottom:1px solid #49402f
+.food-photo.three{
+  background-image:url('https://d29863819cymls.cloudfront.net/flex-foodhall207/media/images/6552e04ae928d_bca3b14e5900672884700ae7d507df95.png');
 }
-.price-item strong{color:var(--gold);white-space:nowrap}
-
-.order-section{
-background:#191611;border-top:1px solid #4b3b20;
-border-bottom:1px solid #4b3b20
+.food-photo.four{
+  background-image:url('IMG_2715.jpeg');
 }
-.order-box{
-max-width:850px;margin:auto;background:var(--panel);
-padding:30px;border:1px solid #594626;border-radius:10px
+.food-photo.five{
+  background-image:url('https://static.wixstatic.com/media/56488f_064fa21cae6e4871ab4797d1a28a2bf4~mv2.jpg/v1/fill/w_520%2Ch_520%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/56488f_064fa21cae6e4871ab4797d1a28a2bf4~mv2.jpg');
 }
-.order-intro{text-align:center;margin-bottom:30px}
-.customer-fields{
-display:grid;grid-template-columns:1fr 1fr;
-gap:15px;margin-bottom:25px
+.food-photo.six{
+  background-image:url('IMG_1885.jpeg');
 }
-.field label{
-display:block;color:var(--gold);margin-bottom:6px;font-weight:bold
-}
-.field input{
-width:100%;padding:13px;border-radius:5px;
-border:1px solid #594626;background:#11100f;
-color:white;font-size:1rem
-}
-.order-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}
-
-.order-line{
-display:flex;justify-content:space-between;
-align-items:center;gap:10px;padding:12px 0;
-border-bottom:1px solid #393126
-}
-.order-line span{font-size:.95rem}
-.order-line small{display:block;color:var(--muted)}
-
-/* Boutons + et - pour tous les produits */
-.quantity-control{
-display:flex;align-items:center;gap:8px;flex-shrink:0
-}
-.quantity-btn{
-width:36px;height:36px;border:1px solid var(--gold);
-background:#11100f;color:var(--gold);
-border-radius:6px;font-size:1.3rem;font-weight:bold;
-cursor:pointer;display:flex;align-items:center;
-justify-content:center
-}
-.quantity-btn:active{background:var(--gold);color:#111}
-.quantity-input{
-width:48px;height:36px;padding:5px;
-border-radius:5px;border:1px solid #594626;
-background:#11100f;color:white;font-size:1rem;
-text-align:center
-}
-.quantity-input::-webkit-inner-spin-button,
-.quantity-input::-webkit-outer-spin-button{
--webkit-appearance:none;margin:0
-}
-.quantity-input{-moz-appearance:textfield}
-
-.total-box{
-margin-top:25px;padding:20px;background:#11100f;
-border:1px solid #594626;border-radius:8px;
-display:flex;justify-content:space-between;
-align-items:center;font-size:1.2rem
-}
-.total-box strong{color:var(--gold);font-size:1.5rem}
-.send-area{text-align:center;margin-top:25px}
-.send-area button{width:100%;font-size:1.05rem;padding:16px}
-.send-area p{color:var(--muted);font-size:.85rem}
+.card-body{padding:18px}
+.card h3{margin:0 0 7px;color:var(--gold);font-size:1.35rem}
+.card p{margin:0;color:var(--muted);font-size:.93rem}
 
 .band{
-background:linear-gradient(120deg,#211b11,#171512);
-border-top:1px solid #4b3b20;border-bottom:1px solid #4b3b20
+  background:linear-gradient(120deg,#211b11,#171512);
+  border-top:1px solid #4b3b20;
+  border-bottom:1px solid #4b3b20;
 }
 .band-inner{
-display:flex;align-items:center;
-justify-content:space-between;gap:25px
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
 }
+.band p{color:var(--muted);max-width:650px}
+
+.order-section{background:#171512}
+.order-box{
+  max-width:850px;
+  margin:auto;
+  background:var(--panel);
+  border:1px solid #4b3b20;
+  border-radius:10px;
+  padding:28px;
+}
+.order-intro{text-align:center;margin-bottom:25px}
+.order-intro p{color:var(--muted)}
+.order-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:13px 0;
+  border-bottom:1px solid #393126;
+}
+.product-info{flex:1}
+.product-name{font-weight:bold}
+.product-price{color:var(--gold);font-size:.9rem}
+.quantity{
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+.quantity button{
+  width:34px;
+  height:34px;
+  border:1px solid var(--gold);
+  background:transparent;
+  color:var(--gold);
+  border-radius:5px;
+  font-size:1.2rem;
+  cursor:pointer;
+}
+.quantity button:hover{background:var(--gold);color:#17130d}
+.quantity input{
+  width:43px;
+  height:34px;
+  text-align:center;
+  color:var(--cream);
+  background:#11100f;
+  border:1px solid #514735;
+  border-radius:5px;
+  font-size:1rem;
+}
+.total-line{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:25px 0;
+  padding:18px;
+  background:#11100f;
+  border:1px solid #4b3b20;
+  border-radius:6px;
+  font-size:1.1rem;
+}
+.total-price{color:var(--gold);font-size:1.5rem;font-weight:bold}
+.form-fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.form-fields input,.form-fields textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #514735;
+  border-radius:5px;
+  background:#11100f;
+  color:var(--cream);
+  font:inherit;
+}
+.form-fields textarea{grid-column:1/-1;min-height:90px;resize:vertical}
+.order-submit{width:100%;margin-top:18px;font-size:1rem}
+.small-note{font-size:.82rem;color:var(--muted);text-align:center;margin-top:14px}
+
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .feature{
-padding:24px;border:1px solid #393126;
-border-radius:8px;background:var(--panel)
+  padding:24px;
+  border:1px solid #393126;
+  border-radius:8px;
+  background:var(--panel);
 }
 .feature b{
-display:block;color:var(--gold);font-family:Georgia,serif;
-font-size:1.2rem;margin-bottom:8px
+  display:block;
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:1.2rem;
+  margin-bottom:8px;
 }
 .contact-box{
-max-width:760px;margin:auto;text-align:center;
-background:var(--panel);border:1px solid #4b3b20;
-border-radius:10px;padding:42px 26px
+  max-width:760px;
+  margin:auto;
+  text-align:center;
+  background:var(--panel);
+  border:1px solid #4b3b20;
+  border-radius:10px;
+  padding:40px 25px;
 }
 .phone{
-font-size:2rem;color:var(--gold);font-weight:bold;
-display:block;margin:15px 0 24px
+  font-size:clamp(1.5rem,4vw,2.3rem);
+  color:var(--gold);
+  font-weight:bold;
+  display:block;
+  margin:15px 0 24px;
 }
 footer{
-border-top:1px solid #393126;padding:28px 0;
-color:var(--muted);font-size:.85rem
+  border-top:1px solid #393126;
+  padding:28px 0;
+  color:var(--muted);
+  font-size:.85rem;
 }
+.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 
 @media(max-width:760px){
-.navlinks{display:none}
-.grid{grid-template-columns:repeat(2,1fr)}
-.features{grid-template-columns:1fr}
-.band-inner{display:block}
-.band .btn{margin-top:15px}
+  .navlinks{display:none}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .features{grid-template-columns:1fr}
+  .band-inner{display:block}
+  .band .btn{margin-top:12px}
 }
-@media(max-width:500px){
-.grid,.price-grid,.order-list,.customer-fields{grid-template-columns:1fr}
-.food-photo{height:210px}
-.order-box{padding:20px 15px}
-.hero-content{padding:65px 0}
+@media(max-width:520px){
+  .grid{grid-template-columns:1fr}
+  .food-photo{height:210px}
+  .hero{min-height:520px}
+  .order-box{padding:17px}
+  .order-item{gap:7px}
+  .quantity{gap:5px}
+  .quantity button{width:30px;height:32px}
+  .form-fields{grid-template-columns:1fr}
+  .form-fields textarea{grid-column:auto}
 }
 </style>
 </head>
 
 <body>
-
 <header>
-<div class="wrap nav">
-<a class="logo" href="#">TRAITEUR13K</a>
-<nav class="navlinks">
-<a href="#carte">Notre carte</a>
-<a href="#commande">Commander</a>
-<a href="#contact">Contact</a>
-</nav>
-<a class="btn" href="#commande">Commander</a>
-</div>
+  <div class="wrap nav">
+    <a class="logo" href="#">TRAITEUR13K</a>
+    <nav class="navlinks">
+      <a href="#carte">Notre carte</a>
+      <a href="#commande">Commander</a>
+      <a href="#evenements">Événements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#commande">Commander</a>
+  </div>
 </header>
 
 <main>
-
 <section class="hero">
-<div class="wrap hero-content">
-<div class="eyebrow">Traiteur événementiel · Marseille & alentours</div>
-<h1>Vos événements<br><span>méritent un buffet</span><br>gourmand.</h1>
-<p class="lead">Mini-burgers, wraps, pizzas, hot-dogs, verrines et bien d’autres gourmandises pour régaler vos invités.</p>
-<div class="hero-actions">
-<a class="btn" href="#commande">Passer commande</a>
-<a class="btn btn-outline" href="#carte">Découvrir notre carte</a>
-</div>
-</div>
+  <div class="wrap hero-content">
+    <div class="eyebrow">Traiteur événementiel · Marseille & alentours</div>
+    <h1>Vos événements<br><span>méritent un buffet</span><br>gourmand.</h1>
+    <p class="lead">
+      Mini-burgers, wraps, pizzas, petits fours et verrines :
+      composez un buffet gourmand pour vos plus beaux événements.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="#commande">Faire une commande</a>
+      <a class="btn btn-outline" href="#carte">Découvrir la carte</a>
+    </div>
+  </div>
 </section>
 
 <section id="carte">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Nos spécialités</div>
-<h2>De quoi composer votre buffet</h2>
-<p>Des gourmandises salées et sucrées pour toutes vos occasions.</p>
-</div>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Nos spécialités</div>
+      <h2>De quoi composer votre buffet</h2>
+      <p>Des pièces salées et sucrées pour régaler tous vos invités.</p>
+    </div>
 
-<div class="grid">
-<article class="card">
-<div class="food-photo one"></div>
-<div class="card-body"><h3>Mini-burgers</h3><p>Des bouchées gourmandes à partager.</p></div>
-</article>
-<article class="card">
-<div class="food-photo two"></div>
-<div class="card-body"><h3>Wraps</h3><p>Des wraps pratiques et savoureux.</p></div>
-</article>
-<article class="card">
-<div class="food-photo three"></div>
-<div class="card-body"><h3>Pizzas</h3><p>Un incontournable de vos buffets.</p></div>
-</article>
-<article class="card">
-<div class="food-photo four"></div>
-<div class="card-body"><h3>Hot-dogs</h3><p>Une option gourmande et conviviale.</p></div>
-</article>
-<article class="card">
-<div class="food-photo five"></div>
-<div class="card-body"><h3>Verrines sucrées</h3><p>Une touche douce pour terminer le buffet.</p></div>
-</article>
-<article class="card">
-<div class="food-photo six"></div>
-<div class="card-body"><h3>Verrines salées</h3><p>Des formats individuels pleins de saveurs.</p></div>
-</article>
-</div>
-
-<div class="price-menu">
-<div class="price-heading">
-<div class="eyebrow">Nos tarifs</div>
-<h2>La carte & les prix</h2>
-<p class="muted">Prix indiqués à la pièce.</p>
-</div>
-
-<div class="price-grid">
-<div class="price-item"><span>Mini-burgers</span><strong>0,90 €</strong></div>
-<div class="price-item"><span>Wraps</span><strong>0,90 €</strong></div>
-<div class="price-item"><span>Pizzas</span><strong>0,90 €</strong></div>
-<div class="price-item"><span>Hot-dogs</span><strong>0,90 €</strong></div>
-<div class="price-item"><span>Toasts</span><strong>1,50 €</strong></div>
-<div class="price-item"><span>Mini-blinis</span><strong>1,20 €</strong></div>
-<div class="price-item"><span>Mini-quiches</span><strong>1,00 €</strong></div>
-<div class="price-item"><span>Mini-croissants</span><strong>1,50 €</strong></div>
-<div class="price-item"><span>Mini-clubs</span><strong>1,20 €</strong></div>
-<div class="price-item"><span>Sandwichs</span><strong>1,20 €</strong></div>
-<div class="price-item"><span>Mini-brochettes</span><strong>1,00 €</strong></div>
-<div class="price-item"><span>Verrines salées</span><strong>1,50 €</strong></div>
-<div class="price-item"><span>Verrines sucrées</span><strong>1,50 €</strong></div>
-<div class="price-item"><span>Crevettes tempura</span><strong>1,50 €</strong></div>
-</div>
-</div>
-</div>
+    <div class="grid">
+      <article class="card">
+        <div class="food-photo one"></div>
+        <div class="card-body"><h3>Mini-burgers</h3><p>De petits burgers gourmands à partager.</p></div>
+      </article>
+      <article class="card">
+        <div class="food-photo two"></div>
+        <div class="card-body"><h3>Mini-wraps aux tenders</h3><p>Des wraps garnis de tenders, joliment préparés.</p></div>
+      </article>
+      <article class="card">
+        <div class="food-photo three"></div>
+        <div class="card-body"><h3>Mini-pizzas carrées</h3><p>Des petites parts carrées pour vos buffets.</p></div>
+      </article>
+      <article class="card">
+        <div class="food-photo four"></div>
+        <div class="card-body"><h3>Hot-dogs</h3><p>Une bouchée gourmande et conviviale.</p></div>
+      </article>
+      <article class="card">
+        <div class="food-photo five"></div>
+        <div class="card-body"><h3>Verrines sucrées</h3><p>Génoise, crème et fruits en verrines individuelles.</p></div>
+      </article>
+      <article class="card">
+        <div class="food-photo six"></div>
+        <div class="card-body"><h3>Verrines salées</h3><p>Des petites verrines fraîches et gourmandes.</p></div>
+      </article>
+    </div>
+  </div>
 </section>
 
 <section class="order-section" id="commande">
-<div class="wrap">
-<div class="order-box">
-<div class="order-intro">
-<div class="eyebrow">Commande en ligne</div>
-<h2>Composez votre buffet</h2>
-<p class="muted">Choisissez les produits avec les boutons + et −. Votre commande sera préparée dans un SMS.</p>
-</div>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Votre commande</div>
+      <h2>Composez votre buffet</h2>
+      <p>Choisissez les quantités souhaitées. Le total se calcule automatiquement.</p>
+    </div>
 
-<div class="customer-fields">
-<div class="field">
-<label for="customerName">Votre nom</label>
-<input id="customerName" type="text" placeholder="Nom et prénom">
-</div>
-<div class="field">
-<label for="eventDate">Date de l'événement</label>
-<input id="eventDate" type="date">
-</div>
-</div>
+    <div class="order-box">
+      <div class="order-intro">
+        <h3>Votre sélection</h3>
+        <p>Les tarifs sont indiqués à la pièce.</p>
+      </div>
 
-<div class="order-list" id="orderList"></div>
+      <div id="product-list">
 
-<div class="total-box">
-<span>Total estimé</span>
-<strong id="total">0,00 €</strong>
-</div>
+        <div class="order-item" data-name="Mini-burgers" data-price="0.90">
+          <div class="product-info"><div class="product-name">Mini-burgers</div><div class="product-price">0,90 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
 
-<div class="send-area">
-<button class="btn" type="button" onclick="sendOrder()">✉️ Envoyer ma commande par SMS</button>
-<p>Un SMS prérempli s'ouvrira sur votre téléphone. Vérifiez votre commande puis appuyez sur Envoyer.</p>
-</div>
-</div>
-</div>
+        <div class="order-item" data-name="Wraps" data-price="0.90">
+          <div class="product-info"><div class="product-name">Wraps</div><div class="product-price">0,90 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Pizzas" data-price="0.90">
+          <div class="product-info"><div class="product-name">Mini-pizzas</div><div class="product-price">0,90 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Hot-dogs" data-price="0.90">
+          <div class="product-info"><div class="product-name">Hot-dogs</div><div class="product-price">0,90 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Toasts" data-price="1.50">
+          <div class="product-info"><div class="product-name">Toasts</div><div class="product-price">1,50 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Mini-blinis" data-price="1.20">
+          <div class="product-info"><div class="product-name">Mini-blinis</div><div class="product-price">1,20 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Mini-quiches" data-price="1.00">
+          <div class="product-info"><div class="product-name">Mini-quiches</div><div class="product-price">1,00 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Mini-croissants" data-price="1.50">
+          <div class="product-info"><div class="product-name">Mini-croissants</div><div class="product-price">1,50 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Mini-clubs" data-price="1.20">
+          <div class="product-info"><div class="product-name">Mini-clubs</div><div class="product-price">1,20 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Sandwichs" data-price="1.20">
+          <div class="product-info"><div class="product-name">Sandwichs</div><div class="product-price">1,20 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Mini-brochettes" data-price="1.00">
+          <div class="product-info"><div class="product-name">Mini-brochettes</div><div class="product-price">1,00 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Verrines salées" data-price="1.50">
+          <div class="product-info"><div class="product-name">Verrines salées</div><div class="product-price">1,50 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Verrines sucrées" data-price="1.50">
+          <div class="product-info"><div class="product-name">Verrines sucrées</div><div class="product-price">1,50 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+        <div class="order-item" data-name="Crevettes tempura" data-price="1.50">
+          <div class="product-info"><div class="product-name">Crevettes tempura</div><div class="product-price">1,50 € / pièce</div></div>
+          <div class="quantity"><button type="button" class="minus">−</button><input type="number" min="0" value="0" class="qty"><button type="button" class="plus">+</button></div>
+        </div>
+
+      </div>
+
+      <div class="total-line">
+        <strong>Total estimé</strong>
+        <span class="total-price" id="total">0,00 €</span>
+      </div>
+
+      <div class="form-fields">
+        <input type="text" id="customer" placeholder="Votre nom et prénom" required>
+        <input type="tel" id="phone" placeholder="Votre numéro de téléphone" required>
+        <input type="date" id="date" aria-label="Date de l'événement">
+        <input type="text" id="place" placeholder="Lieu de l'événement">
+        <textarea id="notes" placeholder="Informations complémentaires (facultatif)"></textarea>
+      </div>
+
+      <button type="button" class="btn order-submit" id="send-order">Envoyer ma commande par SMS</button>
+      <p class="small-note">Un message prérempli s'ouvrira dans votre application SMS. Vérifiez les informations puis appuyez sur Envoyer.</p>
+    </div>
+  </div>
 </section>
 
 <section class="band" id="evenements">
-<div class="wrap band-inner">
-<div>
-<div class="eyebrow">Vos grandes occasions</div>
-<h2>Un événement à organiser ?</h2>
-<p class="muted">Anniversaire, mariage, baptême, fête de famille ou événement professionnel. Grandes commandes bienvenues, pour 50 à 100 personnes et plus.</p>
-</div>
-<a class="btn" href="#commande">Composer mon buffet</a>
-</div>
+  <div class="wrap band-inner">
+    <div>
+      <div class="eyebrow">Vos grandes occasions</div>
+      <h2>Un événement à organiser ? Parlons de votre buffet.</h2>
+      <p>Anniversaire, mariage, baptême, fête de famille ou événement professionnel. Nous étudions vos demandes et vos commandes en quantité.</p>
+    </div>
+    <a class="btn" href="#commande">Préparer ma commande</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Comment ça marche ?</div>
+      <h2>Votre commande en trois étapes</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><b>01 · Choisissez</b><span class="muted">Sélectionnez les produits et les quantités qui vous intéressent.</span></div>
+      <div class="feature"><b>02 · Envoyez</b><span class="muted">Complétez vos coordonnées et envoyez votre demande par SMS.</span></div>
+      <div class="feature"><b>03 · Confirmez</b><span class="muted">Nous échangeons avec vous pour confirmer les détails de votre commande.</span></div>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
-<div class="wrap">
-<div class="contact-box">
-<div class="eyebrow">Contact & réservations</div>
-<h2>Préparons votre prochain événement</h2>
-<p class="muted">Traiteur13K · Marseille et alentours</p>
-<a class="phone" href="tel:0775717095">07 75 71 70 95</a>
-<a class="btn" href="#commande">Passer une commande</a>
-</div>
-</div>
+  <div class="wrap">
+    <div class="contact-box">
+      <div class="eyebrow">Contact & réservations</div>
+      <h2>Préparons votre prochain événement</h2>
+      <p class="muted">Pour vos commandes et demandes de renseignements à Marseille et alentours, contactez-nous.</p>
+      <a class="phone" href="tel:0775717095">07 75 71 70 95</a>
+      <a class="btn" href="sms:0775717095">Nous envoyer un SMS</a>
+    </div>
+  </div>
 </section>
-
 </main>
 
 <footer>
-<div class="wrap">
-© <span id="year"></span> Traiteur13K · Marseille et alentours
-</div>
+  <div class="wrap foot">
+    <span>© <span id="year"></span> Traiteur13K · Marseille et alentours</span>
+    <span>Traiteur événementiel</span>
+  </div>
 </footer>
 
 <script>
-const products = [
-{name:"Mini-burgers",price:0.90},
-{name:"Wraps",price:0.90},
-{name:"Pizzas",price:0.90},
-{name:"Hot-dogs",price:0.90},
-{name:"Toasts",price:1.50},
-{name:"Mini-blinis",price:1.20},
-{name:"Mini-quiches",price:1.00},
-{name:"Mini-croissants",price:1.50},
-{name:"Mini-clubs",price:1.20},
-{name:"Sandwichs",price:1.20},
-{name:"Mini-brochettes",price:1.00},
-{name:"Verrines salées",price:1.50},
-{name:"Verrines sucrées",price:1.50},
-{name:"Crevettes tempura",price:1.50}
-];
+document.getElementById("year").textContent = new Date().getFullYear();
 
-const orderList=document.getElementById("orderList");
-
-products.forEach((product,index)=>{
-const line=document.createElement("div");
-line.className="order-line";
-
-line.innerHTML=`
-<div>
-<span>${product.name}</span>
-<small>${product.price.toFixed(2).replace(".",",")} € / pièce</small>
-</div>
-<div class="quantity-control">
-<button type="button" class="quantity-btn plus" aria-label="Ajouter ${product.name}">+</button>
-<input class="quantity-input" type="number" min="0" step="1" value="0" id="qty${index}" aria-label="Quantité ${product.name}">
-<button type="button" class="quantity-btn minus" aria-label="Retirer ${product.name}">−</button>
-</div>
-`;
-
-orderList.appendChild(line);
-
-const input=line.querySelector("input");
-const plus=line.querySelector(".plus");
-const minus=line.querySelector(".minus");
-
-plus.addEventListener("click",()=>{
-input.value=(parseInt(input.value)||0)+1;
-updateTotal();
-});
-
-minus.addEventListener("click",()=>{
-input.value=Math.max(0,(parseInt(input.value)||0)-1);
-updateTotal();
-});
-
-input.addEventListener("input",()=>{
-let value=parseInt(input.value);
-if(isNaN(value)||value<0) input.value=0;
-updateTotal();
-});
-});
-
-function getOrder(){
-let lines=[];
-let total=0;
-
-products.forEach((product,index)=>{
-const quantity=Math.max(0,parseInt(document.getElementById("qty"+index).value)||0);
-
-if(quantity>0){
-const subtotal=quantity*product.price;
-total+=subtotal;
-lines.push(`${product.name} : ${quantity} pièce(s) = ${subtotal.toFixed(2).replace(".",",")} €`);
-}
-});
-
-return {lines,total};
-}
+const items = document.querySelectorAll(".order-item");
+const totalElement = document.getElementById("total");
 
 function updateTotal(){
-const order=getOrder();
-document.getElementById("total").textContent=
-order.total.toFixed(2).replace(".",",")+" €";
+  let total = 0;
+
+  items.forEach(item => {
+    const price = Number(item.dataset.price);
+    const input = item.querySelector(".qty");
+    let quantity = Math.max(0, parseInt(input.value, 10) || 0);
+
+    input.value = quantity;
+    total += price * quantity;
+  });
+
+  totalElement.textContent = total.toLocaleString("fr-FR", {
+    style:"currency",
+    currency:"EUR"
+  });
 }
 
-function sendOrder(){
-const name=document.getElementById("customerName").value.trim();
-const date=document.getElementById("eventDate").value;
-const order=getOrder();
+items.forEach(item => {
+  const input = item.querySelector(".qty");
+  const plus = item.querySelector(".plus");
+  const minus = item.querySelector(".minus");
 
-if(!name){
-alert("Merci d'indiquer votre nom.");
-document.getElementById("customerName").focus();
-return;
-}
+  plus.addEventListener("click", () => {
+    input.value = (parseInt(input.value, 10) || 0) + 1;
+    updateTotal();
+  });
 
-if(order.lines.length===0){
-alert("Merci de choisir au moins un produit et une quantité.");
-return;
-}
+  minus.addEventListener("click", () => {
+    input.value = Math.max(0, (parseInt(input.value, 10) || 0) - 1);
+    updateTotal();
+  });
 
-let message="Bonjour Traiteur13K ! Je souhaite passer une commande.\n\n";
-message+="Nom : "+name+"\n";
+  input.addEventListener("input", updateTotal);
+});
 
-if(date){
-const parts=date.split("-");
-message+="Date de l'événement : "+parts[2]+"/"+parts[1]+"/"+parts[0]+"\n";
-}
+document.getElementById("send-order").addEventListener("click", () => {
+  const customer = document.getElementById("customer").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const date = document.getElementById("date").value;
+  const place = document.getElementById("place").value.trim();
+  const notes = document.getElementById("notes").value.trim();
 
-message+="\nMa commande :\n";
-message+=order.lines.join("\n");
-message+="\n\nTOTAL ESTIMÉ : "+order.total.toFixed(2).replace(".",",")+" €";
-message+="\n\nMerci de me confirmer la disponibilité et ma commande.";
+  if(!customer || !phone){
+    alert("Merci de renseigner votre nom et votre numéro de téléphone.");
+    return;
+  }
 
-const smsLink="sms:0775717095?body="+encodeURIComponent(message);
-window.location.href=smsLink;
-}
+  let order = [];
+  let total = 0;
 
-document.getElementById("year").textContent=new Date().getFullYear();
+  items.forEach(item => {
+    const quantity = Math.max(0, parseInt(item.querySelector(".qty").value, 10) || 0);
+    const price = Number(item.dataset.price);
+
+    if(quantity > 0){
+      order.push("- " + item.dataset.name + " : " + quantity + " x " +
+        price.toFixed(2).replace(".", ",") + " € = " +
+        (quantity * price).toFixed(2).replace(".", ",") + " €");
+      total += quantity * price;
+    }
+  });
+
+  if(order.length === 0){
+    alert("Merci de choisir au moins un produit.");
+    return;
+  }
+
+  let message =
+    "Bonjour Traiteur13K ! Je souhaite passer une commande.%0A%0A" +
+    "Nom : " + customer + "%0A" +
+    "Téléphone : " + phone + "%0A";
+
+  message += "%0A--- MA COMMANDE ---%0A" + order.join("%0A");
+  message += "%0A%0ATotal estimé : " +
+    total.toFixed(2).replace(".", ",") + " €";
+
+  if(date) message += "%0ADate de l'événement : " + date;
+  if(place) message += "%0ALieu : " + place;
+  if(notes) message += "%0AInformations : " + notes;
+
+  message += "%0A%0AMerci !";
+
+  window.location.href = "sms:0775717095&body=" + message;
+});
 </script>
-
 </body>
 </html>
