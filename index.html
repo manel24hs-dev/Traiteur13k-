@@ -1,132 +1,313 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Traiteur13K | Traiteur événementiel Marseille</title>
-<meta name="description" content="Traiteur13K, traiteur événementiel à Marseille et alentours. Mini-burgers, wraps, pizzas, hot-dogs et verrines pour vos événements.">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Traiteur13K | Marseille</title>
 <style>
+:root{--bg:#11100f;--panel:#1c1a17;--gold:#d8b56b;--cream:#f7f1e5;--muted:#c8c0b2}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#101010;color:#fff;font-family:Arial,sans-serif}
-header{padding:22px 18px;text-align:center;border-bottom:1px solid #b99a55}
-.logo{font-size:32px;font-weight:bold;letter-spacing:3px;color:#d8b66b}
-.logo span{color:white}
-nav{margin-top:17px}
-nav a{color:#eee;text-decoration:none;margin:0 9px;font-size:13px}
-.hero{padding:85px 22px;text-align:center;background:linear-gradient(#0009,#000c),url('IMG_1885.jpeg') center/cover}
-.hero h1{font-size:42px;color:#e2c47e;margin:0 0 15px}
-.hero p{font-size:18px;line-height:1.6;max-width:650px;margin:auto}
-.btn{display:inline-block;margin-top:25px;background:#d6b56d;color:#111;padding:15px 25px;border-radius:4px;text-decoration:none;font-weight:bold}
-section{padding:55px 20px;max-width:1100px;margin:auto}
-h2{text-align:center;color:#dfbf79;font-size:29px;margin-bottom:12px}
-.intro{text-align:center;color:#ccc;line-height:1.7}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:30px}
-.card{background:#1d1d1d;border:1px solid #554526;border-radius:8px;overflow:hidden;text-align:center}
-.card img{width:100%;height:210px;object-fit:cover;display:block}
-.card h3{color:#e0bf77;margin:18px 10px 8px}
-.card p{color:#ccc;padding:0 15px 15px;line-height:1.5}
-.event{background:#1b1b1b;border-top:1px solid #b99a55;border-bottom:1px solid #b99a55;text-align:center;padding:55px 20px}
-.event h2{margin-top:0}
-.event p{line-height:1.8;color:#eee}
-footer{text-align:center;padding:35px 15px;color:#aaa;font-size:13px}
-footer strong{color:#d9b76e}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#11100fee;border-bottom:1px solid #393126}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:15px}
+.logo{font-family:Georgia,serif;font-size:1.5rem;letter-spacing:2px;color:var(--gold);font-weight:bold}
+.navlinks{display:flex;gap:20px;color:var(--muted);font-size:.9rem}
+.btn{display:inline-block;background:var(--gold);color:#17130d;padding:13px 20px;border-radius:4px;font-weight:bold;border:0;cursor:pointer}
+.btn-outline{border:1px solid var(--gold);color:var(--gold);background:transparent}
+.hero{min-height:570px;display:flex;align-items:center;background:linear-gradient(90deg,#0c0b0af5,#0c0b0a80),url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{padding:80px 0;max-width:700px}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:.78rem;font-weight:bold}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.2}
+h1{font-size:clamp(2.7rem,6vw,5rem)}
+h1 span{color:var(--gold)}
+.lead{font-size:1.1rem;color:#e0d8ca}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+section{padding:75px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 38px}
+h2{font-size:clamp(2rem,4vw,3rem)}
+.muted,.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--panel);border:1px solid #393126;border-radius:8px;overflow:hidden}
+.food-photo{height:190px;background-size:cover;background-position:center}
+.one{background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80')}
+.two{background-image:url('https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80')}
+.three{background-image:url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80')}
+.four{background-image:url('https://images.unsplash.com/photo-1612392062631-94dd858cba88?auto=format&fit=crop&w=800&q=80')}
+.five{background-image:url('https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80')}
+.six{background-image:url('https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=800&q=80')}
+.card-body{padding:20px}
+.card h3{color:var(--gold);margin:0 0 8px}
+.card p{color:var(--muted);margin:0}
+.price-menu{margin-top:55px;padding:35px;background:#211d17;border:1px solid #594626;border-radius:10px}
+.price-heading{text-align:center;margin-bottom:25px}
+.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 30px}
+.price-item{display:flex;justify-content:space-between;gap:12px;padding:12px 2px;border-bottom:1px solid #49402f}
+.price-item strong{color:var(--gold);white-space:nowrap}
+.order-section{background:#191611;border-top:1px solid #4b3b20;border-bottom:1px solid #4b3b20}
+.order-box{max-width:850px;margin:auto;background:var(--panel);padding:30px;border:1px solid #594626;border-radius:10px}
+.order-intro{text-align:center;margin-bottom:30px}
+.customer-fields{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:25px}
+.field label{display:block;color:var(--gold);margin-bottom:6px;font-weight:bold}
+.field input{width:100%;padding:13px;border-radius:5px;border:1px solid #594626;background:#11100f;color:white;font-size:1rem}
+.order-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}
+.order-line{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #393126}
+.order-line span{font-size:.95rem}
+.order-line small{display:block;color:var(--muted)}
+.order-line input{width:68px;padding:9px;border-radius:5px;border:1px solid #594626;background:#11100f;color:white;font-size:1rem;text-align:center}
+.total-box{margin-top:25px;padding:20px;background:#11100f;border:1px solid #594626;border-radius:8px;display:flex;justify-content:space-between;align-items:center;font-size:1.2rem}
+.total-box strong{color:var(--gold);font-size:1.5rem}
+.send-area{text-align:center;margin-top:25px}
+.send-area button{width:100%;font-size:1.05rem;padding:16px}
+.send-area p{color:var(--muted);font-size:.85rem}
+.band{background:linear-gradient(120deg,#211b11,#171512);border-top:1px solid #4b3b20;border-bottom:1px solid #4b3b20}
+.band-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{padding:24px;border:1px solid #393126;border-radius:8px;background:var(--panel)}
+.feature b{display:block;color:var(--gold);font-family:Georgia,serif;font-size:1.2rem;margin-bottom:8px}
+.contact-box{max-width:760px;margin:auto;text-align:center;background:var(--panel);border:1px solid #4b3b20;border-radius:10px;padding:42px 26px}
+.phone{font-size:2rem;color:var(--gold);font-weight:bold;display:block;margin:15px 0 24px}
+footer{border-top:1px solid #393126;padding:28px 0;color:var(--muted);font-size:.85rem}
+@media(max-width:760px){
+.navlinks{display:none}
+.grid{grid-template-columns:repeat(2,1fr)}
+.features{grid-template-columns:1fr}
+.band-inner{display:block}
+.band .btn{margin-top:15px}
+}
+@media(max-width:500px){
+.grid,.price-grid,.order-list,.customer-fields{grid-template-columns:1fr}
+.food-photo{height:210px}
+.order-box{padding:20px 15px}
+.hero-content{padding:65px 0}
+}
 </style>
 </head>
-
 <body>
 
 <header>
-<div class="logo">TRAITEUR<span>13K</span></div>
-<nav>
-<a href="#accueil">Accueil</a>
-<a href="#prestations">Nos spécialités</a>
-<a href="#evenements">Événements</a>
+<div class="wrap nav">
+<a class="logo" href="#">TRAITEUR13K</a>
+<nav class="navlinks">
+<a href="#carte">Notre carte</a>
+<a href="#commande">Commander</a>
 <a href="#contact">Contact</a>
 </nav>
+<a class="btn" href="#commande">Commander</a>
+</div>
 </header>
 
-<div class="hero" id="accueil">
-<h1>Traiteur13K</h1>
-<p>Le goût de vos événements, l'élégance de vos réceptions.<br>
-Votre traiteur à Marseille et ses alentours.</p>
-<a class="btn" href="tel:0775717095">Appelez-nous</a>
-</div>
+<main>
 
-<section id="prestations">
-<h2>Nos spécialités</h2>
-<p class="intro">Des préparations gourmandes et généreuses pour régaler vos invités.</p>
+<section class="hero">
+<div class="wrap hero-content">
+<div class="eyebrow">Traiteur événementiel · Marseille & alentours</div>
+<h1>Vos événements<br><span>méritent un buffet</span><br>gourmand.</h1>
+<p class="lead">Mini-burgers, wraps, pizzas, hot-dogs, verrines et bien d’autres gourmandises pour régaler vos invités.</p>
+<div class="hero-actions">
+<a class="btn" href="#commande">Passer commande</a>
+<a class="btn btn-outline" href="#carte">Découvrir notre carte</a>
+</div>
+</div>
+</section>
+
+<section id="carte">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Nos spécialités</div>
+<h2>De quoi composer votre buffet</h2>
+<p>Des gourmandises salées et sucrées pour toutes vos occasions.</p>
+</div>
 
 <div class="grid">
-
-<div class="card">
-<img src="IMG_1885.jpeg" alt="Préparation traiteur">
-<h3>Mini-burgers</h3>
-<p>De délicieux petits burgers pour vos buffets et réceptions.</p>
+<article class="card"><div class="food-photo one"></div><div class="card-body"><h3>Mini-burgers</h3><p>Des bouchées gourmandes à partager.</p></div></article>
+<article class="card"><div class="food-photo two"></div><div class="card-body"><h3>Wraps</h3><p>Des wraps pratiques et savoureux.</p></div></article>
+<article class="card"><div class="food-photo three"></div><div class="card-body"><h3>Pizzas</h3><p>Un incontournable de vos buffets.</p></div></article>
+<article class="card"><div class="food-photo four"></div><div class="card-body"><h3>Hot-dogs</h3><p>Une option gourmande et conviviale.</p></div></article>
+<article class="card"><div class="food-photo five"></div><div class="card-body"><h3>Verrines sucrées</h3><p>Une touche douce pour terminer le buffet.</p></div></article>
+<article class="card"><div class="food-photo six"></div><div class="card-body"><h3>Verrines salées</h3><p>Des formats individuels pleins de saveurs.</p></div></article>
 </div>
 
-<div class="card">
-<img src="IMG_1886.jpeg" alt="Préparation traiteur">
-<h3>Wraps</h3>
-<p>Des wraps gourmands, parfaits pour partager un moment convivial.</p>
+<div class="price-menu">
+<div class="price-heading">
+<div class="eyebrow">Nos tarifs</div>
+<h2>La carte & les prix</h2>
+<p class="muted">Prix indiqués à la pièce.</p>
 </div>
-
-<div class="card">
-<img src="IMG_1889.jpeg" alt="Préparation traiteur">
-<h3>Pizzas</h3>
-<p>Des pizzas savoureuses à partager avec vos invités.</p>
+<div class="price-grid">
+<div class="price-item"><span>Mini-burgers</span><strong>0,90 €</strong></div>
+<div class="price-item"><span>Wraps</span><strong>0,90 €</strong></div>
+<div class="price-item"><span>Pizzas</span><strong>0,90 €</strong></div>
+<div class="price-item"><span>Hot-dogs</span><strong>0,90 €</strong></div>
+<div class="price-item"><span>Tots</span><strong>1,50 €</strong></div>
+<div class="price-item"><span>Mini-glinis</span><strong>1,20 €</strong></div>
+<div class="price-item"><span>Mini-quiches</span><strong>1,00 €</strong></div>
+<div class="price-item"><span>Mini-croissants</span><strong>1,50 €</strong></div>
+<div class="price-item"><span>Mini-clubs</span><strong>1,20 €</strong></div>
+<div class="price-item"><span>Sandwichs</span><strong>1,20 €</strong></div>
+<div class="price-item"><span>Mini-brochettes</span><strong>1,00 €</strong></div>
+<div class="price-item"><span>Verrines salées</span><strong>1,50 €</strong></div>
+<div class="price-item"><span>Verrines sucrées</span><strong>1,50 €</strong></div>
+<div class="price-item"><span>Crevettes tempura</span><strong>1,50 €</strong></div>
 </div>
-
-<div class="card">
-<img src="IMG_2129.jpeg" alt="Préparation traiteur">
-<h3>Hot-dogs</h3>
-<p>Une touche gourmande et conviviale pour vos événements.</p>
 </div>
-
-<div class="card">
-<img src="IMG_2715.jpeg" alt="Préparation traiteur">
-<h3>Verrines sucrées</h3>
-<p>Tiramisu et verrines aux fruits pour terminer sur une note douce.</p>
-</div>
-
-<div class="card">
-<img src="IMG_1885.jpeg" alt="Buffet traiteur">
-<h3>Verrines salées</h3>
-<p>Tomate mozzarella, thon concombre fromage, surimi fromage et bien d'autres idées gourmandes.</p>
-</div>
-
 </div>
 </section>
 
-<div class="event" id="evenements">
-<h2>Vos grands événements, notre spécialité</h2>
-<p>Anniversaires • Mariages • Baptêmes • Réceptions<br>
-Événements professionnels • Fêtes de fin d'année</p>
-
-<p><strong>Commandes pour 50, 100 personnes et plus.</strong><br>
-Des prestations adaptées à vos envies et au nombre de vos invités.</p>
-
-<a class="btn" href="tel:0775717095">Demander un devis par téléphone</a>
+<section class="order-section" id="commande">
+<div class="wrap">
+<div class="order-box">
+<div class="order-intro">
+<div class="eyebrow">Commande en ligne</div>
+<h2>Composez votre buffet</h2>
+<p class="muted">Choisissez les produits et indiquez les quantités souhaitées. Votre commande sera préparée dans un SMS.</p>
 </div>
+
+<div class="customer-fields">
+<div class="field">
+<label for="customerName">Votre nom</label>
+<input id="customerName" type="text" placeholder="Nom et prénom">
+</div>
+<div class="field">
+<label for="eventDate">Date de l'événement</label>
+<input id="eventDate" type="date">
+</div>
+</div>
+
+<div class="order-list" id="orderList"></div>
+
+<div class="total-box">
+<span>Total estimé</span>
+<strong id="total">0,00 €</strong>
+</div>
+
+<div class="send-area">
+<button class="btn" type="button" onclick="sendOrder()">✉️ Envoyer ma commande par SMS</button>
+<p>Un SMS prérempli s'ouvrira sur votre téléphone. Vérifiez votre commande puis appuyez sur Envoyer.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band" id="evenements">
+<div class="wrap band-inner">
+<div>
+<div class="eyebrow">Vos grandes occasions</div>
+<h2>Un événement à organiser ?</h2>
+<p class="muted">Anniversaire, mariage, baptême, fête de famille ou événement professionnel. Grandes commandes bienvenues, pour 50 à 100 personnes et plus.</p>
+</div>
+<a class="btn" href="#commande">Composer mon buffet</a>
+</div>
+</section>
 
 <section id="contact">
-<h2>Contactez Traiteur13K</h2>
-<p class="intro">Vous préparez un événement à Marseille ou aux alentours ?<br>
-Parlons ensemble de votre projet !</p>
-
-<div style="text-align:center">
-<a class="btn" href="tel:0775717095">07 75 71 70 95</a>
-<p style="color:#bbb;margin-top:20px">Marseille et alentours</p>
+<div class="wrap">
+<div class="contact-box">
+<div class="eyebrow">Contact & réservations</div>
+<h2>Préparons votre prochain événement</h2>
+<p class="muted">Traiteur13K · Marseille et alentours</p>
+<a class="phone" href="tel:0775717095">07 75 71 70 95</a>
+<a class="btn" href="#commande">Passer une commande</a>
+</div>
 </div>
 </section>
 
+</main>
+
 <footer>
-<strong>TRAITEUR13K</strong><br>
-Traiteur événementiel à Marseille et alentours<br>
-© 2026 Traiteur13K - Tous droits réservés
+<div class="wrap">
+© <span id="year"></span> Traiteur13K · Marseille et alentours
+</div>
 </footer>
+
+<script>
+const products = [
+{name:"Mini-burgers",price:0.90},
+{name:"Wraps",price:0.90},
+{name:"Pizzas",price:0.90},
+{name:"Hot-dogs",price:0.90},
+{name:"Tots",price:1.50},
+{name:"Mini-glinis",price:1.20},
+{name:"Mini-quiches",price:1.00},
+{name:"Mini-croissants",price:1.50},
+{name:"Mini-clubs",price:1.20},
+{name:"Sandwichs",price:1.20},
+{name:"Mini-brochettes",price:1.00},
+{name:"Verrines salées",price:1.50},
+{name:"Verrines sucrées",price:1.50},
+{name:"Crevettes tempura",price:1.50}
+];
+
+const orderList = document.getElementById("orderList");
+
+products.forEach((product,index)=>{
+const line=document.createElement("div");
+line.className="order-line";
+line.innerHTML=`
+<div>
+<span>${product.name}</span>
+<small>${product.price.toFixed(2).replace(".",",")} € / pièce</small>
+</div>
+<input type="number" min="0" step="1" value="0" id="qty${index}" aria-label="Quantité ${product.name}">
+`;
+orderList.appendChild(line);
+line.querySelector("input").addEventListener("input",updateTotal);
+});
+
+function getOrder(){
+let lines=[];
+let total=0;
+
+products.forEach((product,index)=>{
+const quantity=Math.max(0,parseInt(document.getElementById("qty"+index).value)||0);
+if(quantity>0){
+const subtotal=quantity*product.price;
+total+=subtotal;
+lines.push(`${product.name} : ${quantity} pièce(s) = ${subtotal.toFixed(2).replace(".",",")} €`);
+}
+});
+return {lines,total};
+}
+
+function updateTotal(){
+const order=getOrder();
+document.getElementById("total").textContent=order.total.toFixed(2).replace(".",",")+" €";
+}
+
+function sendOrder(){
+const name=document.getElementById("customerName").value.trim();
+const date=document.getElementById("eventDate").value;
+const order=getOrder();
+
+if(!name){
+alert("Merci d'indiquer votre nom.");
+document.getElementById("customerName").focus();
+return;
+}
+if(order.lines.length===0){
+alert("Merci de choisir au moins un produit et une quantité.");
+return;
+}
+
+let message="Bonjour Traiteur13K ! Je souhaite passer une commande.\n\n";
+message+="Nom : "+name+"\n";
+if(date){
+const parts=date.split("-");
+message+="Date de l'événement : "+parts[2]+"/"+parts[1]+"/"+parts[0]+"\n";
+}
+message+="\nMa commande :\n";
+message+=order.lines.join("\n");
+message+="\n\nTOTAL ESTIMÉ : "+order.total.toFixed(2).replace(".",",")+" €";
+message+="\n\nMerci de me confirmer la disponibilité et ma commande.";
+
+const smsLink="sms:0775717095?body="+encodeURIComponent(message);
+window.location.href=smsLink;
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 
 </body>
 </html>
